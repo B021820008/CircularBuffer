@@ -1,0 +1,63 @@
+Dependencies for Project 'CMSISrtxSemaphore', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\main.c)(0x60CC26D9)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_Target_1\RTE_Components.h)(0x60CAE5DC)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8ED122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5C8A247C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (uart.h)(0x5039AA2C)
+F (.\uart.c)(0x60CB5F35)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32F10x.h)(0x5825386C)
+I (.\RTE\_Target_1\RTE_Components.h)(0x60CAE5DC)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8ED122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+F (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Boards\Keil\MCBSTM32E\Common\LED_MCBSTM32E.c)(0x59EEA016)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\led_mcbstm32e.o --omf_browse .\led_mcbstm32e.crf --depend .\led_mcbstm32e.d)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board\Board_LED.h)(0x5D141D6A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617291E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_Target_1\RTE_Components.h)(0x60CAE5DC)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+F (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib)(0x5E8ED12A)()
+F (RTE\CMSIS\RTX_Conf_CM.c)(0x60C7701B)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\rtx_conf_cm.o --omf_browse .\rtx_conf_cm.crf --depend .\rtx_conf_cm.d)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5C8A247C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC\RTX_CM_lib.h)(0x5E8306CC)
+F (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.c)(0x571EF70A)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\gpio_stm32f10x.o --omf_browse .\gpio_stm32f10x.crf --depend .\gpio_stm32f10x.d)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617291E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_Target_1\RTE_Components.h)(0x60CAE5DC)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8ED122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+F (RTE\Device\STM32F103RB\RTE_Device.h)(0x60C7701B)()
+F (RTE\Device\STM32F103RB\startup_stm32f10x_md.s)(0x60C7701B)(--cpu Cortex-M3 --pd "__RTX SETA 1" --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver--pd "__UVISION_VERSION SETA 534" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list .\startup_stm32f10x_md.lst --xref -o .\startup_stm32f10x_md.o --depend .\startup_stm32f10x_md.d)
+F (RTE\Device\STM32F103RB\system_stm32f10x.c)(0x60C7701B)(-c --cpu Cortex-M3 -D__RTX -D__EVAL -g -O0 --apcs=interwork -I.\RTE\Device\STM32F103RB-I.\RTE\_Target_1-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC-IC:\Users\User\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.12.0\Board-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\system_stm32f10x.o --omf_browse .\system_stm32f10x.crf --depend .\system_stm32f10x.d)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
+I (.\RTE\_Target_1\RTE_Components.h)(0x60CAE5DC)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8ED122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (C:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x5825386C)
