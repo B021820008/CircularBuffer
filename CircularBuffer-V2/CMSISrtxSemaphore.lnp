@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\main.o"
+".\uart.o"
+".\led_mcbstm32e.o"
+"..\..\..\..\..\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib"
+".\rtx_conf_cm.o"
+".\gpio_stm32f10x.o"
+".\startup_stm32f10x_md.o"
+".\system_stm32f10x.o"
+--strict --scatter ".\CMSISrtxSemaphore.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\CMSISrtxSemaphore.map" -o .\CMSISrtxSemaphore.axf
