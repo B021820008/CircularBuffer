@@ -1,0 +1,94 @@
+#include "cmsis_os.h"
+#include "stm32f10x.h"
+
+void producer_thread (void const *argument);
+void consumer_thread(void const *argument);
+
+// Define threads
+osThreadDef(producer_thread, osPriorityNormal,1,0);
+osThreadDef(consumer_thread, osPriorityNormal,1,0);
+
+// Define the semaphores
+
+osSemaphoreId doneProduce;
+osSemaphoreDef(doneProduce);
+osSemaphoreId doneConsume;
+osSemaphoreDef(doneConsume);
+
+// Define the mutex
+
+osMutexId buffMutex;
+osMutexDef(buffMutex);
+
+osThreadId T_uart1;
+osThreadId T_uart2;
+
+#define buffer_capacity 8
+#define data_capacity 8
+
+static int CBUFFER[buffer_capacity];
+static int data[data_capacity] = {1,2,3,4,5,6,7,8};
+static int output [data_capacity];
+static int cbufferHead = 0;
+static int cbufferTail = 0;
+static int i = 0;
+static int j = 0;
+static int value = 1;
+
+int main (void)
+{
+	osKernelInitialize ();
+
+	doneProduce = osSemaphoreCreate(osSemaphore(doneProduce), 0);	
+	doneConsume = osSemaphoreCreate(osSemaphore(doneConsume), 1);	
+	buffMutex = osMutexCreate(osMutex(buffMutex));
+	T_uart1 = osThreadCreate(osThread(producer_thread), NULL);
+	T_uart2 = osThreadCreate(osThread(consumer_thread), NULL);
+	osKernelStart ();
+	
+}
+
+void producer_thread (void const *argument)
+{
+	for (;;) {
+		osSemaphoreWait(doneConsume, osWaitForever);
+		osMutexWait(buffMutex, osWaitForever);
+		if((cbufferTail+1) % (buffer_capacity+1) != 0){
+			CBUFFER[cbufferTail] = value;
+			i++; value++;
+			cbufferTail = (cbufferTail+1) % (buffer_capacity);
+			osMutexRelease(buffMutex);
+			osSemaphoreRelease(doneProduce);
+		}
+		else {
+			cbufferTail = 0;
+			osMutexRelease(buffMutex);
+			osSemaphoreRelease(doneProduce);
+		}
+	}
+}
+
+void consumer_thread(void const *argument)
+{
+	for (;;) {
+		osSemaphoreWait(doneProduce, osWaitForever);
+		osMutexWait(buffMutex, osWaitForever);
+		if((j+1) % (buffer_capacity+1) != 0){
+			output[j] = CBUFFER[cbufferHead];
+			CBUFFER[cbufferHead]=NULL;
+			j++;
+			cbufferHead = (cbufferHead+1) % (buffer_capacity);
+			osMutexRelease(buffMutex);
+			osSemaphoreRelease(doneConsume);
+		}
+		else{
+			j =0;
+			output[j]= CBUFFER[cbufferHead];
+			CBUFFER[cbufferHead]=NULL;
+			cbufferHead = (cbufferHead+1) % (buffer_capacity);
+			j++;
+			osMutexRelease(buffMutex);
+			osSemaphoreRelease(doneConsume);
+		}
+	}
+}

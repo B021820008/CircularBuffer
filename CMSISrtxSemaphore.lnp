@@ -1,5 +1,6 @@
 --cpu Cortex-M3
 ".\main.o"
+".\uart.o"
 ".\led_mcbstm32e.o"
 "D:\Keil\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib"
 ".\rtx_conf_cm.o"
