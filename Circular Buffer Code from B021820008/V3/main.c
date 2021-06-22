@@ -2,18 +2,15 @@
 #include "cmsis_os.h"
 #include "uart.h"
 
-void x_Thread0 (void const *argument);
 void x_Thread1 (void const *argument);
 void x_Thread2 (void const *argument);
 void x_Thread3 (void const *argument);
 void x_Thread4 (void const *argument);
-osThreadDef(x_Thread0, osPriorityNormal, 1, 0);
 osThreadDef(x_Thread1, osPriorityNormal, 1, 0);
 osThreadDef(x_Thread2, osPriorityNormal, 1, 0);
 osThreadDef(x_Thread3, osPriorityNormal, 1, 0);
 osThreadDef(x_Thread4, osPriorityNormal, 1, 0);
 
-osThreadId T_x0;
 osThreadId T_x1;
 osThreadId T_x2;
 osThreadId T_x3;
@@ -118,7 +115,7 @@ unsigned char get(){
 	osSemaphoreWait(item_semaphore, osWaitForever);
 	osMutexWait(x_mutex, osWaitForever);
 	rr = buffer[removePtr];
-	SendChar(rr); SendChar('\n');
+	SendChar(rr); 
 	buffer[removePtr]=NULL;
 	removePtr = (removePtr + 1) % N;
 	t2++;
@@ -127,40 +124,33 @@ unsigned char get(){
 	return rr;
 }
 
-void x_Thread0 (void const *argument) 
-{
-	//producer
-	for(;;){
-		put();
-		test();
-	}
-}
+//int loopcount = 20;
 
 void x_Thread1 (void const *argument) 
 {
 	//producer
-	for(;;){
-		put2();
+	// unsigned char item = 0x30;
+	for(i=0;i<10;i++){
 		test();
+		put();
 	}
 }
 
 void x_Thread2 (void const *argument) 
 {
-	//consumer (waiter #1)
-	unsigned int data = 0x00;
-	for(;;){
-		data = get();
-		osMessagePut(Q_LED,data,osWaitForever);             //Place a value in the message queue
+	//producer #2
+	//unsigned char item = 0x30;
+	for(j=0;j<10;j++){
+		put2();  		//Place a value in the message queue
 		test();
 	}
 }
 
 void x_Thread3 (void const *argument) 
 {
-	//consumer (waiter #2)
+	//consumer (waiter)
 	unsigned int c2data = 0x00;
-	for(;;){
+	for(k=0;k<20;k++){
 		c2data = get();
 		test();
 		osMessagePut(Q_LED,c2data,osWaitForever);             //Place a value in the message queue
@@ -172,7 +162,7 @@ void x_Thread4(void const *argument)
 	//cashier
 	for(;;){
 		result = 	osMessageGet(Q_LED,osWaitForever);				//wait for a message to arrive
-		SendChar(result.value.v);
+		//SendChar(result.value.v);
 	}
 }
 
@@ -186,7 +176,6 @@ int main (void)
 	
 	Q_LED = osMessageCreate(osMessageQ(Q_LED),NULL);					//create the message queue
 	
-	T_x0 = osThreadCreate(osThread(x_Thread0), NULL);//another producer
 	T_x1 = osThreadCreate(osThread(x_Thread1), NULL);//producer
 	T_x2 = osThreadCreate(osThread(x_Thread2), NULL);//consumer
 	T_x3 = osThreadCreate(osThread(x_Thread3), NULL);//another consumer
@@ -195,3 +184,4 @@ int main (void)
  
 	osKernelStart ();                         // start thread execution 
 }
+
